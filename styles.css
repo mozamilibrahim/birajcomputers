@@ -1,0 +1,88 @@
+/* LogIn page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55); /* Gradient background */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #00ffff; /* Neon cyan */
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #ffffff; /* White */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #00ffff; /* Neon border */
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    color: #ffffff; /* White text */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #ff00ff; /* Neon pink on focus */
+    background-color: rgba(255, 255, 255, 0.3); /* Change background on focus */
+}
+
+.interactive-btn {
+    padding: 12px 25px;
+    background-color: #ff00ff; /* Neon pink */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+    width: 100%;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+.interactive-btn:hover {
+    background-color: #ff6b6b; /* Light pink on hover */
+    transform: translateY(-3px); /* Slight bounce effect */
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+/* LogIn page end */

@@ -1,0 +1,275 @@
+:root {
+    --primary-color: #191b29; /* Dark Slate Gray */
+    --accent-color: #2b3ae0; /* Vibrant Teal */
+    --secondary-color: #e3e3ff; /* Warm Beige */
+    --highlight-color: #f7f7f7; /* Soft White */
+    --button-bg: #53ba13; /* Light Coral */
+    --button-hover-bg: #b30925; /* Darker Coral */
+    --background-gradient-start: #146da8; /* Slate Gray */
+    --background-gradient-mid: #7e3880; /* Dark Green */
+    --background-gradient-end: #2f313d; /* Sea Green */
+    --card-bg: #cf4132; /* Medium Slate Blue */
+    --card-hover-bg: #d0a955; /* Slightly darker Blue for hover */
+    --footer-bg: #07021c; /* Deep Teal */
+}
+
+/* General body styling with smooth background gradient */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-color);
+    color: var(--highlight-color);
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-mid), var(--background-gradient-end));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Gradient animation for the background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Header with gradient background */
+header {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    padding: 30px;
+    color: var(--highlight-color);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+/* Hero Section with clean typography */
+.hero {
+    padding: 120px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--highlight-color);
+    margin-top: 80px;
+    border-radius: 8px;
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--primary-color);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Cards with modern theme and hover effects */
+.card {
+    background-color: #1c2a38; /* Deep Navy Blue for the background */
+    border-radius: 12px; /* Rounded corners for a sleek look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    padding: 25px;
+    color: #fff; /* Soft white text for contrast */
+    text-align: left;
+    border: 1px solid #00bfae; /* Light teal border for a fresh touch */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effect for the card */
+.card:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    background: linear-gradient(135deg, #1c2a38, #00bfae); /* Gradient effect from navy to teal */
+}
+
+/* Card heading style */
+.card h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* White color for headings */
+    font-weight: 600;
+}
+
+/* Card paragraph or text content */
+.card p {
+    font-size: 1.1em;
+    color: #d0d0d0; /* Soft gray text for readability */
+    line-height: 1.6;
+}
+
+/* Card list and link style */
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    margin: 12px 0;
+}
+
+.card ul li a {
+    text-decoration: none;
+    color: #00bfae; /* Teal color for links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the links */
+.card ul li a:hover {
+    color: #fff; /* White color when hovering over links */
+}
+
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg);
+    color: var(--highlight-color);
+    font-size: 1.2em;
+    border-top: 2px solid var(--accent-color);
+    margin-top: 40px;
+}
+
+/* Button Styling */
+.button-container {
+    margin-top: 50px;
+}
+
+.button {
+    background-color: var(--button-bg);
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--card-bg);
+    color: var(--highlight-color);
+    border-radius: 4px;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: var(--card-hover-bg);
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 15px;
+}
+
+.search-container input[type="text"] {
+    padding: 12px 18px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    width: 300px;
+    color: var(--primary-color);
+    background-color: #1d62a8;
+    transition: all 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px rgba(236, 240, 241, 0.4);
+}
+
+.search-container button {
+    padding: 12px 25px;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-container button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: var(--button-hover-bg);
+    transition: all 0.5s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.4;
+}
+
+.search-container button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+.search-container button:hover {
+    background-color: var(--button-hover-bg);
+    box-shadow: 0 0 8px rgba(236, 240, 241, 0.3);
+}
